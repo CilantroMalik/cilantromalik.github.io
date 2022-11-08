@@ -15,6 +15,25 @@ export const Books = () => {
             <hr style={{width: "95%"}} />
         </div>
         <div style={{display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "center"}}>
+            <div style={{padding: "1vh", width: "48%"}}>
+                <h3 style={{color: "cornflowerblue"}}><strong>fiction ——————</strong></h3>
+
+                <h5 style={{color: "cornflowerblue"}}><strong>Midnight's Children</strong>, <em>by Salman Rushdie</em></h5>
+                <ul><li style={{color: "#d1d1d1"}}>lengthy, intricately wrought, flowing prose and a healthy dose of magical realism: a transformative chronicle of india from past to present.</li></ul>
+
+                <h5 style={{color: "cornflowerblue"}}><strong>The Satanic Verses</strong>, <em>by Salman Rushdie</em></h5>
+                <ul><li style={{color: "#d1d1d1"}}>rushdie's trademark elements of form and style, with multiple densely interwoven plots converging on a tale of otherness and transplantation.</li></ul>
+                
+                <h5 style={{color: "cornflowerblue"}}><strong>Native Speaker</strong>, <em>by Chang-Rae Lee</em></h5>
+                <ul><li style={{color: "#d1d1d1"}}>a hauntingly accurate portrayal of the asian-american experience and the eternal tension between the model minority and the perpetual foreigner.</li></ul>
+                
+                <h5 style={{color: "cornflowerblue"}}><strong>If You See Me, Don't Say Hi</strong>, <em>by Neel Patel</em></h5>
+                <ul><li style={{color: "#d1d1d1"}}>a collection of anecdotes at once rough and crystalline, disjoint yet unified, moving too quickly to process yet too slowly to let pass by.</li></ul>
+                
+                <h5 style={{color: "cornflowerblue"}}><strong>Ficciones</strong>, <em>by Jorge Luís Borges</em></h5>
+                <ul><li style={{color: "#d1d1d1"}}>utterly mind-bending short stories that play with the philosophical, mathematical, and metaphysical underpinnings of the world: reimagining, reinventing, rediscovering.</li></ul>
+                
+            </div>
         </div>
         </>
     )
