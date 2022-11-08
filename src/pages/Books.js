@@ -34,6 +34,25 @@ export const Books = () => {
                 <ul><li style={{color: "#d1d1d1"}}>utterly mind-bending short stories that play with the philosophical, mathematical, and metaphysical underpinnings of the world: reimagining, reinventing, rediscovering.</li></ul>
                 
             </div>
+            <div style={{padding: "1vh", width: "48%"}}>
+                <h3 style={{color: "pink"}}><strong>nonfiction ——————</strong></h3>
+
+                <h5 style={{color: "pink"}}><strong>The Emperor of All Maladies: A Biography of Cancer</strong>, <em>by Siddhartha Mukherjee</em></h5>
+                <ul><li style={{color: "#d1d1d1"}}>simultaneously a rich historical narrative, a deep scientific exploration, and a heartbreaking personal tale: the many sides of humanity's eternal dilemma.</li></ul>
+
+                <h5 style={{color: "pink"}}><strong>99 Variations on a Proof</strong>, <em>by Philip Ording</em></h5>
+                <ul><li style={{color: "#d1d1d1"}}>a friendly exposition of the scope and versatility of math, stretching the concept of proof to its limits: for what matters isn't the answer, but how we ask the question.</li></ul>
+                
+                <h5 style={{color: "pink"}}><strong>How Not to Be Wrong</strong>, <em>by Jordan Ellenberg</em></h5>
+                <ul><li style={{color: "#d1d1d1"}}>a literally and figuratively eye-opening look at math's everyday disguises. made me incredulously say all of the question words, to nobody in particular, multiple times.</li></ul>
+                
+                <h5 style={{color: "pink"}}><strong>e</strong>, <em>by f</em></h5>
+                <ul><li style={{color: "#d1d1d1"}}>e</li></ul>
+                
+                <h5 style={{color: "pink"}}><strong>e</strong>, <em>by f</em></h5>
+                <ul><li style={{color: "#d1d1d1"}}>e</li></ul>
+                
+            </div>
         </div>
         </>
     )
