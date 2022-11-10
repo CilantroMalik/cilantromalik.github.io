@@ -1,5 +1,5 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react';
-import { useNavigate } from 'react-router';
+import {useLocation, useNavigate} from 'react-router';
 import image1 from '../assets/nameFrames/001.png'; import image2 from '../assets/nameFrames/002.png'; import image3 from '../assets/nameFrames/003.png'; import image4 from '../assets/nameFrames/004.png'; import image5 from '../assets/nameFrames/005.png'; import image6 from '../assets/nameFrames/006.png'; import image7 from '../assets/nameFrames/007.png'; import image8 from '../assets/nameFrames/008.png'; import image9 from '../assets/nameFrames/009.png'; import image10 from '../assets/nameFrames/010.png'
 import image11 from '../assets/nameFrames/011.png'; import image12 from '../assets/nameFrames/012.png'; import image13 from '../assets/nameFrames/013.png'; import image14 from '../assets/nameFrames/014.png'; import image15 from '../assets/nameFrames/015.png'; import image16 from '../assets/nameFrames/016.png'; import image17 from '../assets/nameFrames/017.png'; import image18 from '../assets/nameFrames/018.png'; import image19 from '../assets/nameFrames/019.png'; import image20 from '../assets/nameFrames/020.png'
 import image21 from '../assets/nameFrames/021.png'; import image22 from '../assets/nameFrames/022.png'; import image23 from '../assets/nameFrames/023.png'; import image24 from '../assets/nameFrames/024.png'; import image25 from '../assets/nameFrames/025.png'; import image26 from '../assets/nameFrames/026.png'; import image27 from '../assets/nameFrames/027.png'; import image28 from '../assets/nameFrames/028.png'; import image29 from '../assets/nameFrames/029.png'; import image30 from '../assets/nameFrames/030.png'
@@ -48,6 +48,8 @@ export const Home = () => {
     const [navigating, setNavigating] = useState(false)
 
     const navigate = useNavigate()
+    const location = useLocation()
+    const ln = "/under construction"
     const lb = "/books"
     const lt = "/thoughts"
     const lp = "/projects"
@@ -79,11 +81,14 @@ export const Home = () => {
 
     useEffect(() => {
         console.log("effecting")
-        window.scrollTo({top: 0, behavior: "instant"})
+        let locState = false
+        if (location.state) { locState = location.state.skipIntro }
+        window.scrollTo({top: locState ? 1300 : 0, behavior: "auto"})
     }, [])
 
     const traverseTree = (link) => {
-        window.scrollTo({top: 1300, behavior: "instant"})
+        if (link === "/under construction") { return }
+        window.scrollTo({top: 1300, behavior: "auto"})
         window.scrollTo({top: 0, behavior: "smooth"})
         setTimeout(() => {
             setNavigating(true)
@@ -141,9 +146,10 @@ export const Home = () => {
                 <img style={{width: "8vh"}} src={arrow} alt="" />
                 <br />
                 <p><em>[scroll down, or]</em></p>
-                <button style={{zIndex: "27", width: "8vw", height: "8vh", fontSize: "3vh"}} onClick={scrollDown}>enter</button>
+                <button style={{zIndex: "27", width: "7rem", height: "4rem", fontSize: "1.5rem"}} onClick={scrollDown}>enter</button>
             </div>
         </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -171,8 +177,8 @@ export const Home = () => {
                     <span> {s}{s}&nbsp;&nbsp;{a(<>_///´</>,18,5)}{s5}{a(<>{g("#")}</>,18,1)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{g("##")}</>,18,2)}{s5}&nbsp;{a(<>{g("#")}</>,13,1)}{a(<>{g("##")}</>,12,2)}{s5}&nbsp;&nbsp;{a(<>\\\\\\\\\\&nbsp;//</>,7,13)}&nbsp;&nbsp;{a(<>{g("#")}</>,10,1)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>`--</>,11,3)}{a(<>__</>,12,2)}{s5}&nbsp;{a(<>{g("#")}</>,15,1)}{s}&nbsp;&nbsp;&nbsp; </span> <br />
                     <span> {s}{s}&nbsp;&nbsp;{a(<>|--|</>,18,4)}{s5}&nbsp;{a(<>{g("#")}</>,19,1)}&nbsp;&nbsp;&nbsp;{a(<>{g("##")}</>,19,2)}{s5}&nbsp;{a(<>{g("#")}</>,14,1)}{a(<>{g("#")}</>,13,1)}{s5}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>||||||||||//</>,6,12)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{g("#")}</>,11,1)}{s5}&nbsp;{a(<>`\\</>,12,3)}{s5}&nbsp;{a(<>{g("#")}</>,16,1)}{s}&nbsp;&nbsp; </span> <br />
                     <span> {s}{s}&nbsp;{a(<>//</>,19,2)}&nbsp;&nbsp;{a(<>\\</>,19,2)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{g("#")}</>,20,1)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{g("#")}</>,20,1)}{s5}&nbsp;&nbsp;{a(<>{g("#")}</>,14,1)}{s}{a(<>||/&nbsp;\|||||/</>,5,11)}{s5}&nbsp;{a(<>{g("#")}</>,12,1)}{s5}&nbsp;&nbsp;{a(<>|</>,13,1)}{s5}&nbsp;{a(<>{g("#")}</>,16,1)}{a(<>{g("#")}</>,17,1)}{s}&nbsp; </span> <br /> 
-                    <span> {s}{s5}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{p("*",lb)}</>,20,1)}{a(<>/</>,19,1)}{a(<>{p("*",lb)}</>,20,1)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{p("*",lb)}</>,20,1)}{a(<>\</>,19,1)}{a(<>{p("*",lb)}</>,20,1)}{s5}&nbsp;&nbsp;{a(<>{g("#")}</>,21,1)}{s5}&nbsp;{a(<>{g("##")}</>,15,2)}{s}{a(<>||&nbsp;~&nbsp;||||||</>,4,11)}{s5}&nbsp;{a(<>{g("#")}</>,13,1)}{s5}&nbsp;{a(<>{p("*",lb)}</>,14,1)}{a(<>|</>,13,1)}{a(<>{p("*",lb)}</>,14,1)}{s5}&nbsp;{a(<>{g("#")}</>,17,1)}{s}&nbsp; </span> <br />
-                    <span> {s}{s5}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{p("*",lb)}</>,21,1)}{a(<>{p("*",lb)}</>,20,1)}{a(<>{p("*",lb)}</>,21,1)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{p("*",lb)}</>,21,1)}{a(<>{p("*",lb)}</>,20,1)}{a(<>{p("*",lb)}</>,21,1)}{s5}&nbsp;{a(<>{g("#")}</>,22,1)}{s5}&nbsp;{a(<>{g("#")}</>,16,1)}{s}&nbsp;&nbsp;{a(<>||\_/||||||</>,3,11)}{s}&nbsp;&nbsp;&nbsp;{a(<>{p("*",lb)}</>,15,1)}{a(<>{p("*",lb)}</>,14,1)}{a(<>{p("*",lb)}</>,15,1)}{s}{s5}&nbsp;&nbsp;&nbsp; </span> <br />
+                    <span> {s}{s5}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{p("*",ln)}</>,20,1)}{a(<>/</>,19,1)}{a(<>{p("*",ln)}</>,20,1)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{p("*",ln)}</>,20,1)}{a(<>\</>,19,1)}{a(<>{p("*",ln)}</>,20,1)}{s5}&nbsp;&nbsp;{a(<>{g("#")}</>,21,1)}{s5}&nbsp;{a(<>{g("##")}</>,15,2)}{s}{a(<>||&nbsp;~&nbsp;||||||</>,4,11)}{s5}&nbsp;{a(<>{g("#")}</>,13,1)}{s5}&nbsp;{a(<>{p("*",lb)}</>,14,1)}{a(<>|</>,13,1)}{a(<>{p("*",lb)}</>,14,1)}{s5}&nbsp;{a(<>{g("#")}</>,17,1)}{s}&nbsp; </span> <br />
+                    <span> {s}{s5}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{p("*",ln)}</>,21,1)}{a(<>{p("*",ln)}</>,20,1)}{a(<>{p("*",ln)}</>,21,1)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{p("*",ln)}</>,21,1)}{a(<>{p("*",ln)}</>,20,1)}{a(<>{p("*",ln)}</>,21,1)}{s5}&nbsp;{a(<>{g("#")}</>,22,1)}{s5}&nbsp;{a(<>{g("#")}</>,16,1)}{s}&nbsp;&nbsp;{a(<>||\_/||||||</>,3,11)}{s}&nbsp;&nbsp;&nbsp;{a(<>{p("*",lb)}</>,15,1)}{a(<>{p("*",lb)}</>,14,1)}{a(<>{p("*",lb)}</>,15,1)}{s}{s5}&nbsp;&nbsp;&nbsp; </span> <br />
                     <span> {s}{s}{s}{s}&nbsp;&nbsp;{a(<>{g("#")}</>,17,1)}{s}&nbsp;&nbsp;{a(<>|||||||||||</>,2,11)}{s}{s}{s}&nbsp;&nbsp;&nbsp;&nbsp; </span> <br />
                     <span> {s}{s}{s}{s}{s}&nbsp;&nbsp;&nbsp;{a(<>_////|||||\\\\_</>,1,15)}{s}{s}{s}&nbsp;&nbsp; </span> <br />
                     <span> {s}{s}{s}{s}{s}{a(<>__//////|||||\\\\\\__</>,0,21)}{s}{s}{s5}&nbsp;&nbsp;&nbsp;&nbsp; </span> <br />
@@ -187,7 +193,7 @@ export const Home = () => {
             <h2 style={{opacity: hoverShowing ? 1 : 0, transition: "opacity 0.5s ease-in-out"}}><strong>{hoverPage}</strong></h2>
         </div>
         <div style={{position: "fixed", top: "18vh", right: "2vh"}}>
-            <p style={{opacity: showingInst ? 1 : 0, transition: "opacity 0.5s ease-out", fontSize: "3vh"}}><em>(use the flowers to traverse the tree.)</em></p>
+            <p style={{opacity: showingInst ? 1 : 0, transition: "opacity 0.5s ease-out", fontSize: "3vh", fontWeight: "500"}}><em>(use the flowers to traverse the tree.)</em></p>
         </div>
     </>)
 }
