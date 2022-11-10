@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import {useNavigate} from "react-router";
 
 export const Books = () => {
+    const navigate = useNavigate()
 
     useEffect(() => {
       window.scrollTo({top: 0, behavior: "instant"})
@@ -46,13 +48,18 @@ export const Books = () => {
                 <h5 style={{color: "pink"}}><strong>How Not to Be Wrong</strong>, <em>by Jordan Ellenberg</em></h5>
                 <ul><li style={{color: "#d1d1d1"}}>a literally and figuratively eye-opening look at math's everyday disguises. made me incredulously say all of the question words, to nobody in particular, multiple times.</li></ul>
                 
-                <h5 style={{color: "pink"}}><strong>e</strong>, <em>by f</em></h5>
-                <ul><li style={{color: "#d1d1d1"}}>e</li></ul>
+                {/*<h5 style={{color: "pink"}}><strong>e</strong>, <em>by f</em></h5>*/}
+                {/*<ul><li style={{color: "#d1d1d1"}}>e</li></ul>*/}
                 
-                <h5 style={{color: "pink"}}><strong>e</strong>, <em>by f</em></h5>
-                <ul><li style={{color: "#d1d1d1"}}>e</li></ul>
+                {/*<h5 style={{color: "pink"}}><strong>e</strong>, <em>by f</em></h5>*/}
+                {/*<ul><li style={{color: "#d1d1d1"}}>e</li></ul>*/}
                 
             </div>
+        </div>
+        <hr style={{width: "95%"}}/>
+        <br/><br/>
+        <div className="flex-row">
+            <button className="muted-button" onClick={() => navigate("/", {state: {skipIntro: true}})}>return</button>
         </div>
         </>
     )
