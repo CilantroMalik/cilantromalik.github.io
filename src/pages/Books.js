@@ -59,7 +59,7 @@ export const Books = () => {
         <hr style={{width: "95%"}}/>
         <br/><br/>
         <div className="flex-row">
-            <button className="muted-button" onClick={() => navigate("/", {state: {skipIntro: true}})}>return</button>
+            <button className="muted-button" style={{marginBottom: "1rem"}} onClick={() => navigate("/", {state: {skipIntro: true}})}>return</button>
         </div>
         </>
     )
