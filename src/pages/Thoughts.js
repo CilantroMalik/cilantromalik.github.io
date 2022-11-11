@@ -23,11 +23,11 @@ export const Thoughts = () => {
             <button className="muted-button" onClick={() => navigate("/", {state: {skipIntro: true}})}>return</button>
         </div>
         { modal !== "" &&
-            <div style={{borderRadius: "2rem", position: "absolute", top: "2vh", left: "19vw", width: "60%", backgroundColor: "#262a41", paddingLeft: "1vw", paddingRight: "1vw", paddingBottom: "2vh", opacity: modal !== "" ? 1 : 0, transition: "opacity 0.6s ease-in"}}>
-                <h2 style={{textAlign: "center"}}>{modal === "weather" ? "thoughts on weather" : "thoughts on gender"}</h2>
+            <div style={{borderRadius: "2rem", position: "absolute", top: "2vh", left: "19vw", width: "60%", backgroundColor: "#262a41", paddingLeft: "2rem", paddingRight: "2rem", paddingBottom: "2vh", opacity: modal !== "" ? 1 : 0, transition: "opacity 0.6s ease-in"}}>
+                <h2 style={{textAlign: "center"}}>{modal === "weather" && "reflections on weather"}{modal === "gender" && "reflections on gender"}{modal === "time" && "reflections on time"}</h2>
                 <hr style={{width: "95%"}}/>
                 <br/>
-                <div style={{fontSize: "1.3vh", fontWeight: "600", color: "#b0b0b0"}}>
+                <div style={{fontSize: "1rem", fontWeight: "600", color: "#b0b0b0"}}>
                     {modal === "gender" && <p>
                         we live in a world of binaries. man and woman, black and white, asian and american, a vast array of interdependent pillars that form a rigid structure whose foundations are built upon the core human desire for organization, for neatness, for simplicity. bearing the immense weight of the millenia of history that constructed it, this structure stands firm in the pantheon of modern society, an idyllic monument to humanity’s greatest achievement: its relentless, unfeeling, absolute classification of continuous, infinite-dimensional humans into discrete, finite-dimensional spaces. mathematics does not permit unjustified morphisms of the continuous into the discrete nor of the infinite into the finite; yet the unspoken logic of our society, which we tacitly accept as infallible, fails to abide by the very axioms of reason on which it claims to base itself.
                         <br/>indeed, gender falls prey to the very same foundational hypocrisies. whether conflicting standards of clothing that create obvious contradictions when considering multicultural perspectives, or profoundly harmful expectations of behavior that cause irreparable damage to young and old people alike, gender presents a coldly efficient guise under which to exercise control, to propagate the desires of a few through the nameless vessels of the societal collective, an infinity of individual infinitesimals that sum through the magic of mathematics to an omnipotent whole.
