@@ -12,24 +12,20 @@ export const About = () => {
             <br/>
             <div className="flex-row">
                 <div style={{display: "flex", flexDirection: "column", alignItems: "center", width: "40vw", marginRight: "3vw", borderRadius: "1rem", border: "2px solid cornflowerblue"}}>
-                    <h3 style={{fontSize: "4vh"}}>nouns</h3>
-                    <div className="flex-row">
-                        <ul style={{fontSize: "2vh", marginRight: "0.75vw", fontWeight: "500"}}>
-                            <li>nonbinary indian-american</li>
-                            <li>scarf enthusiast</li>
-                            <li>amateur pianist</li>
-                            <li>math & CS nerd</li>
-                            <li>climatology nerd</li>
-                            <li>linguistics nerd</li>
-                        </ul>
-                        <ul style={{fontSize: "2vh", marginLeft: "0.75vw", fontWeight: "500"}}>
-                            <li>queer theory nerd</li>
-                            <li>game design nerd</li>
-                            <li>devourer of books of all sorts</li>
-                            <li><strong>rohan_malik@ryecountryday.org</strong></li>
-                            <li><strong>github.com/RohanMalikRCDS</strong></li>
-                        </ul>
-                    </div>
+                    <h3 style={{fontSize: "4vh"}}>verbs</h3>
+                    <ul style={{fontSize: "2vh", fontWeight: "500", columns: 2}}>
+                        <li>nonbinary indian-american</li>
+                        <li>scarf enthusiast</li>
+                        <li>amateur pianist</li>
+                        <li>math & CS nerd</li>
+                        <li>climatology nerd</li>
+                        <li>linguistics nerd</li>
+                        <li>queer theory nerd</li>
+                        <li>game design nerd</li>
+                        <li>devourer of books of all sorts</li>
+                        <li><strong>rohan_malik@ryecountryday.org</strong></li>
+                        <li><strong>github.com/RohanMalikRCDS</strong></li>
+                    </ul>
                 </div>
                 <div style={{display: "flex", flexDirection: "column", alignItems: "center", width: "40vw", marginLeft: "3vw", borderRadius: "1rem", border: "2px solid cornflowerblue"}}>
                     <h3 style={{fontSize: "4vh"}}>verbs</h3>
