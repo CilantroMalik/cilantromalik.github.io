@@ -16,6 +16,7 @@ import image121 from '../assets/nameFrames/121.png'; import image122 from '../as
 import image131 from '../assets/nameFrames/131.png'; import image132 from '../assets/nameFrames/132.png'; import image133 from '../assets/nameFrames/133.png'; import image134 from '../assets/nameFrames/134.png'; import image135 from '../assets/nameFrames/135.png'; import image136 from '../assets/nameFrames/136.png'; import image137 from '../assets/nameFrames/137.png'; import image138 from '../assets/nameFrames/138.png'; import image139 from '../assets/nameFrames/139.png'; import image140 from '../assets/nameFrames/140.png'
 import image141 from '../assets/nameFrames/141.png'; import image142 from '../assets/nameFrames/142.png'; import image143 from '../assets/nameFrames/143.png'; import image144 from '../assets/nameFrames/144.png'; import image145 from '../assets/nameFrames/145.png'; import image146 from '../assets/nameFrames/146.png'; import image147 from '../assets/nameFrames/147.png'; import image148 from '../assets/nameFrames/148.png'; import image149 from '../assets/nameFrames/149.png'; import image150 from '../assets/nameFrames/150.png'
 import arrow from '../assets/arrow.png'
+import vine from '../assets/vine.png'
 
 const images = [image1,   image2,   image3,   image4,   image5,   image6,   image7,   image8,   image9,   image10,
                 image11,  image12,  image13,  image14,  image15,  image16,  image17,  image18,  image19,  image20,
@@ -49,7 +50,8 @@ export const Home = () => {
 
     const navigate = useNavigate()
     const location = useLocation()
-    const ln = "/under construction"
+    const lg = "/github"
+    const ll = "/linkedin"
     const lb = "/books"
     const lt = "/thoughts"
     const lp = "/projects"
@@ -87,7 +89,14 @@ export const Home = () => {
     }, [])
 
     const traverseTree = (link) => {
-        if (link === "/under construction") { return }
+        if (link === "/github") {
+            window.open("https://github.com/RohanMalikRCDS", "_blank")
+            return
+        }
+        if (link === "/linkedin") { 
+            window.open("https://www.linkedin.com/in/rohan-malik-6a8983202/", "_blank")
+            return
+        }
         window.scrollTo({top: 1300, behavior: "auto"})
         window.scrollTo({top: 0, behavior: "smooth"})
         setTimeout(() => {
@@ -134,9 +143,12 @@ export const Home = () => {
 
     // 100 characters per line, 20 lines
     return (<>
-        <br /><br /><br /><br /><br />
+        <br /><br />
         <div style={{opacity: navigating ? 0 : 1}}>
-            <h1 style={{textAlign: "center", opacity: scrollPos > 30 ? 0 : 1, transition: "opacity 0.5s ease-out"}}>welcome!</h1>
+            <div style={{width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
+                <img style={{width: "70vw"}} src={vine} alt="" />
+            </div>
+            <h1 style={{marginTop: "0.5rem", textAlign: "center", opacity: scrollPos > 30 ? 0 : 1, transition: "opacity 0.5s ease-out"}}>welcome!</h1>
             <h4 style={{textAlign: "center", opacity: scrollPos > 70 ? 0 : 1, transition: "opacity 0.5s ease-out"}}>i'm glad to see you here.</h4>
             <p style={{textAlign: "center", opacity: scrollPos > 110 ? 0 : 1, transition: "opacity 0.5s ease-out", marginLeft: "1rem", marginRight: "1rem"}}>this page houses my various projects-in-being, projects-to-be, and projects-once-were, as well as assorted thoughts and ramblings i've projected into cyberspace that found their way here. please enjoy your stay, and wherever your next destination may be, enjoy the journey :)</p>
             <br />
@@ -177,8 +189,8 @@ export const Home = () => {
                     <span> {s}{s}&nbsp;&nbsp;{a(<>_///´</>,18,5)}{s5}{a(<>{g("#")}</>,18,1)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{g("##")}</>,18,2)}{s5}&nbsp;{a(<>{g("#")}</>,13,1)}{a(<>{g("##")}</>,12,2)}{s5}&nbsp;&nbsp;{a(<>\\\\\\\\\\&nbsp;//</>,7,13)}&nbsp;&nbsp;{a(<>{g("#")}</>,10,1)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>`--</>,11,3)}{a(<>__</>,12,2)}{s5}&nbsp;{a(<>{g("#")}</>,15,1)}{s}&nbsp;&nbsp;&nbsp; </span> <br />
                     <span> {s}{s}&nbsp;&nbsp;{a(<>|--|</>,18,4)}{s5}&nbsp;{a(<>{g("#")}</>,19,1)}&nbsp;&nbsp;&nbsp;{a(<>{g("##")}</>,19,2)}{s5}&nbsp;{a(<>{g("#")}</>,14,1)}{a(<>{g("#")}</>,13,1)}{s5}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>||||||||||//</>,6,12)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{g("#")}</>,11,1)}{s5}&nbsp;{a(<>`\\</>,12,3)}{s5}&nbsp;{a(<>{g("#")}</>,16,1)}{s}&nbsp;&nbsp; </span> <br />
                     <span> {s}{s}&nbsp;{a(<>//</>,19,2)}&nbsp;&nbsp;{a(<>\\</>,19,2)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{g("#")}</>,20,1)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{g("#")}</>,20,1)}{s5}&nbsp;&nbsp;{a(<>{g("#")}</>,14,1)}{s}{a(<>||/&nbsp;\|||||/</>,5,11)}{s5}&nbsp;{a(<>{g("#")}</>,12,1)}{s5}&nbsp;&nbsp;{a(<>|</>,13,1)}{s5}&nbsp;{a(<>{g("#")}</>,16,1)}{a(<>{g("#")}</>,17,1)}{s}&nbsp; </span> <br /> 
-                    <span> {s}{s5}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{p("*",ln)}</>,20,1)}{a(<>/</>,19,1)}{a(<>{p("*",ln)}</>,20,1)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{p("*",ln)}</>,20,1)}{a(<>\</>,19,1)}{a(<>{p("*",ln)}</>,20,1)}{s5}&nbsp;&nbsp;{a(<>{g("#")}</>,21,1)}{s5}&nbsp;{a(<>{g("##")}</>,15,2)}{s}{a(<>||&nbsp;~&nbsp;||||||</>,4,11)}{s5}&nbsp;{a(<>{g("#")}</>,13,1)}{s5}&nbsp;{a(<>{p("*",lb)}</>,14,1)}{a(<>|</>,13,1)}{a(<>{p("*",lb)}</>,14,1)}{s5}&nbsp;{a(<>{g("#")}</>,17,1)}{s}&nbsp; </span> <br />
-                    <span> {s}{s5}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{p("*",ln)}</>,21,1)}{a(<>{p("*",ln)}</>,20,1)}{a(<>{p("*",ln)}</>,21,1)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{p("*",ln)}</>,21,1)}{a(<>{p("*",ln)}</>,20,1)}{a(<>{p("*",ln)}</>,21,1)}{s5}&nbsp;{a(<>{g("#")}</>,22,1)}{s5}&nbsp;{a(<>{g("#")}</>,16,1)}{s}&nbsp;&nbsp;{a(<>||\_/||||||</>,3,11)}{s}&nbsp;&nbsp;&nbsp;{a(<>{p("*",lb)}</>,15,1)}{a(<>{p("*",lb)}</>,14,1)}{a(<>{p("*",lb)}</>,15,1)}{s}{s5}&nbsp;&nbsp;&nbsp; </span> <br />
+                    <span> {s}{s5}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{p("*",lg)}</>,20,1)}{a(<>/</>,19,1)}{a(<>{p("*",lg)}</>,20,1)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{p("*",ll)}</>,20,1)}{a(<>\</>,19,1)}{a(<>{p("*",ll)}</>,20,1)}{s5}&nbsp;&nbsp;{a(<>{g("#")}</>,21,1)}{s5}&nbsp;{a(<>{g("##")}</>,15,2)}{s}{a(<>||&nbsp;~&nbsp;||||||</>,4,11)}{s5}&nbsp;{a(<>{g("#")}</>,13,1)}{s5}&nbsp;{a(<>{p("*",lb)}</>,14,1)}{a(<>|</>,13,1)}{a(<>{p("*",lb)}</>,14,1)}{s5}&nbsp;{a(<>{g("#")}</>,17,1)}{s}&nbsp; </span> <br />
+                    <span> {s}{s5}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{p("*",lg)}</>,21,1)}{a(<>{p("*",lg)}</>,20,1)}{a(<>{p("*",lg)}</>,21,1)}&nbsp;&nbsp;&nbsp;&nbsp;{a(<>{p("*",ll)}</>,21,1)}{a(<>{p("*",ll)}</>,20,1)}{a(<>{p("*",ll)}</>,21,1)}{s5}&nbsp;{a(<>{g("#")}</>,22,1)}{s5}&nbsp;{a(<>{g("#")}</>,16,1)}{s}&nbsp;&nbsp;{a(<>||\_/||||||</>,3,11)}{s}&nbsp;&nbsp;&nbsp;{a(<>{p("*",lb)}</>,15,1)}{a(<>{p("*",lb)}</>,14,1)}{a(<>{p("*",lb)}</>,15,1)}{s}{s5}&nbsp;&nbsp;&nbsp; </span> <br />
                     <span> {s}{s}{s}{s}&nbsp;&nbsp;{a(<>{g("#")}</>,17,1)}{s}&nbsp;&nbsp;{a(<>|||||||||||</>,2,11)}{s}{s}{s}&nbsp;&nbsp;&nbsp;&nbsp; </span> <br />
                     <span> {s}{s}{s}{s}{s}&nbsp;&nbsp;&nbsp;{a(<>_////|||||\\\\_</>,1,15)}{s}{s}{s}&nbsp;&nbsp; </span> <br />
                     <span> {s}{s}{s}{s}{s}{a(<>__//////|||||\\\\\\__</>,0,21)}{s}{s}{s5}&nbsp;&nbsp;&nbsp;&nbsp; </span> <br />
