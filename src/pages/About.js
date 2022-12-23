@@ -24,7 +24,6 @@ export const About = () => {
                         <li>game design nerd</li>
                         <li>devourer of books of all sorts</li>
                         <li><strong>rohan_malik@ryecountryday.org</strong></li>
-                        <li><strong>github.com/RohanMalikRCDS</strong></li>
                     </ul>
                 </div>
                 <div style={{display: "flex", flexDirection: "column", alignItems: "center", width: "40vw", marginLeft: "3vw", borderRadius: "1rem", border: "2px solid cornflowerblue"}}>
@@ -33,7 +32,7 @@ export const About = () => {
                         <li>thinks too much (or maybe enough)</li>
                         <li>loves cats (and dogs, and birds, and turtles, and everything)</li>
                         <li>has a stutter</li>
-                        <li>somewhat strongly dislikes new york city (except central park)</li>
+                        <li>doesn't love new york city (except central park)</li>
                         <li>spends far too long folding paper into various forms</li>
                         <li>enjoys indie game soundtracks</li>
                     </ul>
