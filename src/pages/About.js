@@ -12,7 +12,7 @@ export const About = () => {
             <br/>
             <div className="flex-row">
                 <div style={{display: "flex", flexDirection: "column", alignItems: "center", width: "40vw", marginRight: "3vw", borderRadius: "1rem", border: "2px solid cornflowerblue"}}>
-                    <h3 style={{fontSize: "4vh"}}>verbs</h3>
+                    <h3 style={{fontSize: "4vh"}}>nouns</h3>
                     <ul style={{fontSize: "2vh", fontWeight: "500", columns: 2}}>
                         <li>nonbinary indian-american</li>
                         <li>scarf enthusiast</li>
@@ -58,7 +58,7 @@ export const About = () => {
                     <ul style={{fontSize: "2vh", fontWeight: "500"}}>
                         <li>favorite tree: weeping cherry</li>
                         <li>favorite herb: cilantro</li>
-                        <li>favorite freeway interchange: diverging diamond</li>
+                        <li>favorite highway interchange: diverging diamond</li>
                         <li>favorite worst interstate: I-95</li>
                         <li>favorite letter: e (2.7182818459045...)</li>
                         <li>favorite origami paper: tissue-foil</li>
