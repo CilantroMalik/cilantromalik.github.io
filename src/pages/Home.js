@@ -145,7 +145,7 @@ export const Home = () => {
     return (<>
         <br /><br />
         <div style={{opacity: navigating ? 0 : 1}}>
-            <div style={{width: "100%", display: "flex", flexDirection: "column", alignItems: "center"}}>
+            <div style={{width: "100%", display: "flex", flexDirection: "column", alignItems: "center", opacity: scrollPos > 30 ? 0 : 1, transition: "opacity 0.5s ease-out"}}>
                 <img style={{width: "70vw"}} src={vine} alt="" />
             </div>
             <h1 style={{marginTop: "0.5rem", textAlign: "center", opacity: scrollPos > 30 ? 0 : 1, transition: "opacity 0.5s ease-out"}}>welcome!</h1>
@@ -161,10 +161,7 @@ export const Home = () => {
                 <button style={{zIndex: "27", width: "7rem", height: "4rem", fontSize: "1.5rem"}} onClick={scrollDown}>enter</button>
             </div>
         </div>
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <div style={{height: "200vh"}}>&nbsp;</div>
         
         <div style={{width: "100vw", height: "100vh", position: "fixed", top: 0, left: 0, opacity: navigating ? 0 : 1, transition: "opacity 0.8s ease-out"}}>
             <div style={{width: "100vw", height: "100vh", display: "flex", flexDirection: "column", justifyContent: "flex-end", position: "fixed", bottom: 0, left: 0, padding: "2vh"}}>
