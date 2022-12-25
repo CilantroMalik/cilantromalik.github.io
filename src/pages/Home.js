@@ -128,7 +128,19 @@ export const Home = () => {
         }, 75)
         setTimeout(async () => {
             clearInterval(int)
+            setNameImage(name)
+            setShowingInst(true)
+            window.scrollTo({top: 1300, behavior: "smooth"})
+            setTimeout(() => { 
+                setIntroDone(true)
+                setIntroInProg(false)
+            }, 1000);
         }, 3000);
+    }
+
+    const reloadName = () => {
+        setNameImage("")
+        setTimeout(() => setNameImage(name), 5)
     }
 
     const g = (str) => { return <span style={{color: "#70db70"}}>{str}</span> }
@@ -192,8 +204,9 @@ export const Home = () => {
             </div>
         </div>
         <div style={{position: "fixed", top: "-8vh", right: "1rem"}}>
-            {introDone ? <img src={images[Math.min(Math.max(Math.round((scrollPos-600)/4), 0), 149)]} alt="alt" style={{width: "32vw", height: "18vw"}}/>
-            : <img src={images[Math.min(nameProgress, 149)]} alt="alt" style={{width: "32vw", height: "18vw"}}/> }
+            {/* {introDone ? <img src={images[Math.min(Math.max(Math.round((scrollPos-600)/4), 0), 149)]} alt="alt" style={{width: "32vw", height: "18vw"}}/>
+            : <img src={images[Math.min(nameProgress, 149)]} alt="alt" style={{width: "32vw", height: "18vw"}}/> } */}
+            <img src={nameImage} alt="rohan malik" style={{width: "32vw", height: "18vw", opacity: scrollPos > 600 ? 1 : 0, transition: "opacity 0.5s ease"}} />
         </div>
         <div style={{position: "fixed", top: "8vh", left: "8vw", opacity: navigating ? 0 : 1, transition: "opacity 0.5s ease-out"}}>
             <h2 style={{opacity: hoverShowing ? 1 : 0, transition: "opacity 0.5s ease-in-out"}}><strong>{hoverPage}</strong></h2>
