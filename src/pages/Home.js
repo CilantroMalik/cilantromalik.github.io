@@ -17,6 +17,8 @@ import image131 from '../assets/nameFrames/131.png'; import image132 from '../as
 import image141 from '../assets/nameFrames/141.png'; import image142 from '../assets/nameFrames/142.png'; import image143 from '../assets/nameFrames/143.png'; import image144 from '../assets/nameFrames/144.png'; import image145 from '../assets/nameFrames/145.png'; import image146 from '../assets/nameFrames/146.png'; import image147 from '../assets/nameFrames/147.png'; import image148 from '../assets/nameFrames/148.png'; import image149 from '../assets/nameFrames/149.png'; import image150 from '../assets/nameFrames/150.png'
 import arrow from '../assets/arrow.png'
 import vine from '../assets/vine.png'
+import name from '../assets/name.gif'
+import nameRev from '../assets/nameRev.gif'
 
 const images = [image1,   image2,   image3,   image4,   image5,   image6,   image7,   image8,   image9,   image10,
                 image11,  image12,  image13,  image14,  image15,  image16,  image17,  image18,  image19,  image20,
@@ -47,6 +49,7 @@ export const Home = () => {
     const [introDone, setIntroDone] = useState(false);
     const [introInProg, setIntroInProg] = useState(false);
     const [navigating, setNavigating] = useState(false)
+    const [nameImage, setNameImage] = useState("")
 
     const navigate = useNavigate()
     const location = useLocation()
@@ -63,6 +66,7 @@ export const Home = () => {
     }
 
     const updatePos = () => {
+        const prevPos = scrollPos
         setScrollPos(Math.round(window.scrollY))
         console.log(scrollPos)
         if (!introDone && !introInProg && scrollPos > 200) {
@@ -72,6 +76,12 @@ export const Home = () => {
             setShowingInst(false)
         } else if (introDone && scrollPos > 800) {
             setShowingInst(true)
+        }
+
+        if (prevPos <= 600 && Math.round(window.scrollY) > 600) {
+            reloadName()
+        } else if (prevPos >= 600 && Math.round(window.scrollY) < 600) {
+            //setNameImage("")
         }
     }
 
@@ -118,19 +128,6 @@ export const Home = () => {
         }, 75)
         setTimeout(async () => {
             clearInterval(int)
-            const int2 = setInterval(() => {
-                setNameProgress(n => n+3)
-            }, 40)
-            setTimeout(() => {
-                setNameProgress(149)
-                clearInterval(int2)
-                setShowingInst(true)
-                window.scrollTo({top: 1300, behavior: "smooth"})
-                setTimeout(() => { 
-                    setIntroDone(true)
-                    setIntroInProg(false)
-                }, 1000);
-            }, 2000)
         }, 3000);
     }
 
