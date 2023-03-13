@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {useNavigate} from "react-router";
 
 export const Thoughts = () => {
@@ -6,11 +6,21 @@ export const Thoughts = () => {
     const [hover2, setHover2] = useState(false)
     const [hover3, setHover3] = useState(false)
     const [modal, setModal] = useState("")
+    const [mainOpacity, setMainOpacity] = useState(0)
     const navigate = useNavigate()
 
+    useEffect(() => {
+        setTimeout(() => setMainOpacity(1), 300)
+    }, [setMainOpacity])
+
+    const returnHome = () => {
+        setMainOpacity(0)
+        setTimeout(() => navigate("/", {state: {skipIntro: true}}), 600)
+    }
+
     return (<>
-        <div style={{display: "flex", flexDirection: "column", alignItems: "center", filter: modal !== "" ? "blur(30px)" : "blur(0)", opacity: modal === "" ? 1 : 0.4, transition: "filter 0.6s ease-out"}}>
-            <h1>[thoughts]</h1>
+        <div style={{display: "flex", flexDirection: "column", alignItems: "center", filter: modal !== "" ? "blur(30px)" : "blur(0)", opacity: modal === "" ? mainOpacity : 0.4, transition: "filter 0.6s ease-out, opacity 0.5s ease"}}>
+            <h1 style={{fontWeight: "800"}}>[thoughts]</h1>
             <p style={{textAlign: "center"}}>contained here are thoughts, ramblings, mental snapshots, and the like, on various topics. <br /> select a topic to view a piece of writing of some nonzero length.</p>
             <hr style={{width: "95%"}} />
             <br/>
@@ -20,7 +30,7 @@ export const Thoughts = () => {
             <br/>
             <h4>[more to come, subject to the inconstant ebb and flow of words]</h4>
             <br/>
-            <button className="muted-button" onClick={() => navigate("/", {state: {skipIntro: true}})}>return</button>
+            <button className="muted-button" onClick={returnHome}>return</button>
         </div>
         { modal !== "" &&
             <div style={{borderRadius: "2rem", position: "absolute", top: "2vh", left: "24vw", width: "50%", backgroundColor: "#262a41", paddingLeft: "2rem", paddingRight: "2rem", paddingBottom: "2vh",  opacity: modal !== "" ? 1 : 0, transition: "opacity 0.6s ease-in"}}>

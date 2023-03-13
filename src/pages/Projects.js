@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {useNavigate} from "react-router";
 
 export const Projects = () => {
     const [proj, setProj] = useState("")
     const [proj2, setProj2] = useState("")
     const navigate = useNavigate()
+    const [mainOpacity, setMainOpacity] = useState(0)
+
+    useEffect(() => {
+        setTimeout(() => setMainOpacity(1), 300)
+    }, [setMainOpacity])
+
+    const returnHome = () => {
+        setMainOpacity(0)
+        setTimeout(() => navigate("/", {state: {skipIntro: true}}), 600)
+    }
 
     return (
-        <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-            <h1>[projects]</h1>
+        <div style={{display: "flex", flexDirection: "column", alignItems: "center", opacity: mainOpacity, transition: "opacity 0.5s ease"}}>
+            <h1 style={{fontWeight: "800"}}>[projects]</h1>
             <p style={{textAlign: "center"}}>here are brief descriptions of a few projects i've done and/or been a part of.<br /> feel free to explore, and if any of these interest you, feel free to reach out! i'm always down to talk about anything :)</p>
             <hr style={{width: "95%"}} />
             <br/>
@@ -47,7 +57,7 @@ export const Projects = () => {
             </div>
             <br/><br/>
             <div className="flex-row">
-                <button className="muted-button" style={{marginBottom: "2rem"}} onClick={() => navigate("/", {state: {skipIntro: true}})}>return</button>
+                <button className="muted-button" style={{marginBottom: "2rem"}} onClick={returnHome}>return</button>
             </div>
         </div>
     )
