@@ -8,19 +8,22 @@ export const About = () => {
     const [aboutHover3, setAboutHover3] = useState(false)
     const [aboutHover4, setAboutHover4] = useState(false)
     const [appear, setAppear] = useState([0, 0, 0, 0])
-    const [mainOpacity, setMainOpacity] = useState(1)
+    const [mainOpacity, setMainOpacity] = useState(0)
 
     useEffect(() => {
-        setAppear([1, 0, 0, 0])
+        setTimeout(() => setMainOpacity(1), 300)
         setTimeout(() => {
-            setAppear([1, 1, 0, 0])
+            setAppear([1, 0, 0, 0])
             setTimeout(() => {
-                setAppear([1, 1, 1, 0])
+                setAppear([1, 1, 0, 0])
                 setTimeout(() => {
-                    setAppear([1, 1, 1, 1])
+                    setAppear([1, 1, 1, 0])
+                    setTimeout(() => {
+                        setAppear([1, 1, 1, 1])
+                    }, 400)
                 }, 400)
             }, 400)
-        }, 400)
+        }, 600)
     }, [setAppear])
 
     const returnHome = () => {
