@@ -3,16 +3,26 @@ import {useNavigate} from "react-router";
 
 export const Books = () => {
     const navigate = useNavigate()
+    const [mainOpacity, setMainOpacity] = useState(0)
 
     useEffect(() => {
       window.scrollTo({top: 0, behavior: "instant"})
     }, [])
+
+    useEffect(() => {
+        setTimeout(() => setMainOpacity(1), 300)
+    }, [setMainOpacity])
+
+    const returnHome = () => {
+        setMainOpacity(0)
+        setTimeout(() => navigate("/", {state: {skipIntro: true}}), 600)
+    }
     
 
     return (
-        <>
+        <div style={{opacity: mainOpacity, transition: "opacity 0.5s ease"}}>
         <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-            <h1>[books]</h1>
+            <h1 style={{fontWeight: "800"}}>[books]</h1>
             <p style={{textAlign: "center"}}>these are some books i've read and loved over the years. <br /> if it isn't obvious from this list, my interests are as varied as the spontaneous forces that spark them.</p>
             <hr style={{width: "95%"}} />
         </div>
@@ -59,8 +69,8 @@ export const Books = () => {
         <hr style={{width: "95%"}}/>
         <br/><br/>
         <div className="flex-row">
-            <button className="muted-button" style={{marginBottom: "1rem"}} onClick={() => navigate("/", {state: {skipIntro: true}})}>return</button>
+            <button className="muted-button" style={{marginBottom: "1rem"}} onClick={returnHome}>return</button>
         </div>
-        </>
+        </div>
     )
 }
