@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {useNavigate} from "react-router";
 
 export const About = () => {
     const navigate = useNavigate()
+    const returnHome = () => {
+        setMainOpacity(0)
+        setTimeout(() => navigate("/", {state: {skipIntro: true}}), 600)
+    }
 
     return (
-        <div style={{display: "flex", flexDirection: "column", alignItems: "center", marginTop: "2vh"}}>
-            <h1>[about]</h1>
+        <div style={{display: "flex", flexDirection: "column", alignItems: "center", marginTop: "2vh", opacity: mainOpacity, transition: "opacity 0.5s ease"}}>
+            <h1 style={{fontWeight: "800"}}>[about]</h1>
             <p style={{textAlign: "center"}}>here are a few quick facts about me, scattered all over the map!</p>
             <hr style={{width: "95%"}} />
             <br/>
@@ -68,7 +72,7 @@ export const About = () => {
             <br/><br/>
             <hr style={{width: "95%"}}/>
             <br/><br/>
-            <button className="muted-button" style={{marginBottom: "1rem"}} onClick={() => navigate("/", {state: {skipIntro: true}})}>return</button>
+            <button className="muted-button" style={{marginBottom: "1rem"}} onClick={returnHome}>return</button>
         </div>
     )
 }
