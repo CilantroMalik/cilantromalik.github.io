@@ -35,9 +35,10 @@ export const About = () => {
             <hr style={{width: "95%"}} />
             <br/>
             <div className="flex-row">
-                <div style={{display: "flex", flexDirection: "column", alignItems: "center", width: "40vw", marginRight: "3vw", borderRadius: "1rem", border: "2px solid cornflowerblue"}}>
-                    <h3 style={{fontSize: "4vh"}}>nouns</h3>
-                    <ul style={{fontSize: "2vh", fontWeight: "500", columns: 2}}>
+                <div style={{display: "flex", flexDirection: "column", alignItems: "center", width: aboutHover ? "51vw" : (aboutHover2 ? "21vw" : "41vw"), marginRight: "2vw", borderRadius: "1rem", border: "2px solid cornflowerblue", padding: "0.5rem", transition: "all 0.5s ease", opacity: appear[0] === 1 ? "1" : "0"}}
+                     onMouseEnter={() => setAboutHover(true)} onMouseLeave={() => setAboutHover(false)}>
+                    <h3 style={{fontSize: "4vmin"}}>nouns</h3>
+                    <ul style={{fontSize: "2vmin", fontWeight: "500"}}>
                         <li>nonbinary indian-american</li>
                         <li>scarf enthusiast</li>
                         <li>amateur pianist</li>
@@ -48,9 +49,10 @@ export const About = () => {
                         <li>devourer of books of all sorts</li>
                     </ul>
                 </div>
-                <div style={{display: "flex", flexDirection: "column", alignItems: "center", width: "40vw", marginLeft: "3vw", borderRadius: "1rem", border: "2px solid cornflowerblue"}}>
-                    <h3 style={{fontSize: "4vh"}}>verbs</h3>
-                    <ul style={{fontSize: "2vh", fontWeight: "500"}}>
+                <div style={{display: "flex", flexDirection: "column", alignItems: "center", width: aboutHover ? "31vw" : (aboutHover2 ? "61vw" : "41vw"), marginLeft: "2vw", borderRadius: "1rem", border: "2px solid cornflowerblue", padding: "0.5rem", transition: "all 0.5s ease", opacity: appear[1] === 1 ? "1" : "0"}}
+                     onMouseEnter={() => setAboutHover2(true)} onMouseLeave={() => setAboutHover2(false)}>
+                    <h3 style={{fontSize: "4vmin"}}>verbs</h3>
+                    <ul style={{fontSize: "2vmin", fontWeight: "500"}}>
                         <li>thinks too much (or maybe enough)</li>
                         <li>loves cats (and dogs, and birds, and turtles, and everything)</li>
                         <li>has a stutter</li>
@@ -63,9 +65,10 @@ export const About = () => {
             <br/>
             <br/>
             <div className="flex-row">
-                <div style={{display: "flex", flexDirection: "column", alignItems: "center", width: "30vw", marginRight: "3vw", borderRadius: "1rem", border: "2px solid cornflowerblue"}}>
-                    <h3 style={{fontSize: "4vh"}}>adjectives</h3>
-                    <ul style={{fontSize: "2vh", fontWeight: "500"}}>
+                <div style={{display: "flex", flexDirection: "column", alignItems: "center", width: aboutHover3 ? "51vw" : (aboutHover4 ? "16vw" : "31vw"), marginRight: "2vw", borderRadius: "1rem", border: "2px solid cornflowerblue", padding: "0.5rem", transition: "all 0.5s ease", opacity: appear[2] === 1 ? "1" : "0"}}
+                     onMouseEnter={() => setAboutHover3(true)} onMouseLeave={() => setAboutHover3(false)}>
+                    <h3 style={{fontSize: "4vmin"}}>adjectives</h3>
+                    <ul style={{fontSize: "2vmin", fontWeight: "500"}}>
                         <li>curious</li>
                         <li>quietly loud</li>
                         <li>optimistic</li>
@@ -75,9 +78,10 @@ export const About = () => {
                         <li>or perhaps not</li>
                     </ul>
                 </div>
-                <div style={{display: "flex", flexDirection: "column", alignItems: "center", width: "50vw", marginLeft: "3vw", borderRadius: "1rem", border: "2px solid cornflowerblue"}}>
-                    <h3 style={{fontSize: "4vh"}}>favorites</h3>
-                    <ul style={{fontSize: "2vh", fontWeight: "500"}}>
+                <div style={{display: "flex", flexDirection: "column", alignItems: "center", width: aboutHover3 ? "31vw" : (aboutHover4 ? "66vw" : "51vw"), marginLeft: "2vw", borderRadius: "1rem", border: "2px solid cornflowerblue", padding: "0.5rem", transition: "all 0.5s ease", opacity: appear[3] === 1 ? "1" : "0"}}
+                     onMouseEnter={() => setAboutHover4(true)} onMouseLeave={() => setAboutHover4(false)}>
+                    <h3 style={{fontSize: "4vmin"}}>favorites</h3>
+                    <ul style={{fontSize: "2vmin", fontWeight: "500"}}>
                         <li>favorite tree: weeping cherry</li>
                         <li>favorite herb: cilantro</li>
                         <li>favorite highway interchange: diverging diamond</li>
