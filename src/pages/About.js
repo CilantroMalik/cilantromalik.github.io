@@ -3,6 +3,26 @@ import {useNavigate} from "react-router";
 
 export const About = () => {
     const navigate = useNavigate()
+    const [aboutHover, setAboutHover] = useState(false)
+    const [aboutHover2, setAboutHover2] = useState(false)
+    const [aboutHover3, setAboutHover3] = useState(false)
+    const [aboutHover4, setAboutHover4] = useState(false)
+    const [appear, setAppear] = useState([0, 0, 0, 0])
+    const [mainOpacity, setMainOpacity] = useState(1)
+
+    useEffect(() => {
+        setAppear([1, 0, 0, 0])
+        setTimeout(() => {
+            setAppear([1, 1, 0, 0])
+            setTimeout(() => {
+                setAppear([1, 1, 1, 0])
+                setTimeout(() => {
+                    setAppear([1, 1, 1, 1])
+                }, 400)
+            }, 400)
+        }, 400)
+    }, [setAppear])
+
     const returnHome = () => {
         setMainOpacity(0)
         setTimeout(() => navigate("/", {state: {skipIntro: true}}), 600)
@@ -24,10 +44,8 @@ export const About = () => {
                         <li>math & CS nerd</li>
                         <li>climatology nerd</li>
                         <li>linguistics nerd</li>
-                        <li>queer theory nerd</li>
                         <li>game design nerd</li>
                         <li>devourer of books of all sorts</li>
-                        <li><strong>rohan_malik@ryecountryday.org</strong></li>
                     </ul>
                 </div>
                 <div style={{display: "flex", flexDirection: "column", alignItems: "center", width: "40vw", marginLeft: "3vw", borderRadius: "1rem", border: "2px solid cornflowerblue"}}>
