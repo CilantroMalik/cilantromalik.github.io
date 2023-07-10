@@ -1,2 +1,2 @@
-# rohanmalikrcds.github.io
+# cilantromalik.github.io
 A collection of metaphysical objects, thoughts, and trifles
