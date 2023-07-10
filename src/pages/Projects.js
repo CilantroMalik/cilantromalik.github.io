@@ -34,7 +34,7 @@ export const Projects = () => {
                  onMouseEnter={() => {setProj("isfl"); setTimeout(() => setProj2("isfl"), 500)}} onMouseLeave={() => {setProj(""); setTimeout(() => setProj2(""), 500)}}>
                 <h4 style={{fontSize: "1.3rem", textAlign: "center"}}>ISFL Fencing</h4>
                 {proj === "isfl" &&
-                <p style={{opacity: proj2 === "isfl" ? 1 : 0, transition: "opacity 1s ease"}}>A platform for viewing, reporting, and managing fencing league results and standings. With a minimalist interface that shows stats for teams, meets, and fencers, as well as enabling coaches to keep a record of completed meets, it provides a lightweight platform for fencers to scout opponents, see their hard-earned place in the rankings, and look back on the season once it's over. <br/><br/> <em>Testing build can be viewed <a href="https://rohanmalikrcds.github.io/ISFLFencingSite">here</a>.</em></p>
+                <p style={{opacity: proj2 === "isfl" ? 1 : 0, transition: "opacity 1s ease"}}>A platform for viewing, reporting, and managing fencing league results and standings. With a minimalist interface that shows stats for teams, meets, and fencers, as well as enabling coaches to keep a record of completed meets, it provides a lightweight platform for fencers to scout opponents, see their hard-earned place in the rankings, and look back on the season once it's over. <br/><br/> <em>The platform can be viewed <a href="https://isflfencing.com">here</a>.</em></p>
                 }
             </div>
             <br/>
