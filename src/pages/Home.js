@@ -203,16 +203,17 @@ export const Home = () => {
                 </p>
             </div>
         </div>
-        <div style={{position: "fixed", top: "-8vh", right: "1rem"}}>
+        <div style={{position: "fixed", top: "3vh", right: "2vh"}}>
             {/* {introDone ? <img src={images[Math.min(Math.max(Math.round((scrollPos-600)/4), 0), 149)]} alt="alt" style={{width: "32vw", height: "18vw"}}/>
             : <img src={images[Math.min(nameProgress, 149)]} alt="alt" style={{width: "32vw", height: "18vw"}}/> } */}
-            <img src={nameImage} alt="rohan malik" style={{width: "32vw", height: "18vw", opacity: scrollPos > 600 ? 1 : 0, transition: "opacity 0.5s ease"}} />
+            <img src={nameImage} alt="ro malik" style={{width: "32vw", height: "7vw", opacity: scrollPos > 600 ? 1 : 0, transition: "opacity 0.5s ease"}} />
+            <p style={{opacity: showingInst ? 1 : 0, transition: "opacity 0.5s ease-out", fontSize: "1.75vw", fontWeight: "500", textAlign: "right"}}><em>(use the flowers to traverse the tree.)</em></p>
         </div>
         <div style={{position: "fixed", top: "8vh", left: "8vw", opacity: navigating ? 0 : 1, transition: "opacity 0.5s ease-out"}}>
             <h2 style={{opacity: hoverShowing ? 1 : 0, transition: "opacity 0.5s ease-in-out"}}><strong>{hoverPage}</strong></h2>
         </div>
-        <div style={{position: "fixed", top: "18vh", right: "2vh"}}>
-            <p style={{opacity: showingInst ? 1 : 0, transition: "opacity 0.5s ease-out", fontSize: "3vh", fontWeight: "500"}}><em>(use the flowers to traverse the tree.)</em></p>
-        </div>
+        {/*<div style={{position: "fixed", top: "18vh", right: "2vh"}}>*/}
+        {/*    <p style={{opacity: showingInst ? 1 : 0, transition: "opacity 0.5s ease-out", fontSize: "3vh", fontWeight: "500"}}><em>(use the flowers to traverse the tree.)</em></p>*/}
+        {/*</div>*/}
     </>)
 }

@@ -46,7 +46,7 @@ export const About = () => {
                         <li>scarf enthusiast</li>
                         <li>amateur pianist</li>
                         <li>math & CS nerd</li>
-                        <li>climatology nerd</li>
+                        <li>urbanism nerd</li>
                         <li>linguistics nerd</li>
                         <li>game design nerd</li>
                         <li>devourer of books of all sorts</li>
