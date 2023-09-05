@@ -40,9 +40,25 @@ export const Projects = () => {
             <br/>
             <div style={{backgroundColor: "#2b3d24", borderRadius: "1rem", height: proj === "wyc" ? "30vh" : "10vh", width: "70%", fontSize: "1rem", padding: "0 2vh", transition: "height 0.5s ease-in-out"}}
                  onMouseEnter={() => {setProj("wyc"); setTimeout(() => setProj2("wyc"), 500)}} onMouseLeave={() => {setProj(""); setTimeout(() => setProj2(""), 500)}}>
+                <h4 style={{fontSize: "1.3rem", textAlign: "center"}}>Storybook</h4>
+                {proj === "wyc" &&
+                <p style={{opacity: proj2 === "wyc" ? 1 : 0, transition: "opacity 1s ease"}}>A web app for creating, hosting, and interacting with collaborative "story spaces," micro-communities where people can write short stories together one sentence at a time. Created as an experiment and an attempt to combat the increasing centralization and correspondingly decreasing intimacy of online human interaction, in some small and possibly but hopefully not insignificant way. <br/><br/> <em>Storybook can be accessed <a href="https://cilantromalik.github.io/storybook">here</a>.</em></p>
+                }
+            </div>
+            <br/>
+            <div style={{backgroundColor: "#2b3d24", borderRadius: "1rem", height: proj === "wyc" ? "30vh" : "10vh", width: "70%", fontSize: "1rem", padding: "0 2vh", transition: "height 0.5s ease-in-out"}}
+                 onMouseEnter={() => {setProj("wyc"); setTimeout(() => setProj2("wyc"), 500)}} onMouseLeave={() => {setProj(""); setTimeout(() => setProj2(""), 500)}}>
+                <h4 style={{fontSize: "1.3rem", textAlign: "center"}}>PCHiC Data Viewer</h4>
+                {proj === "wyc" &&
+                <p style={{opacity: proj2 === "wyc" ? 1 : 0, transition: "opacity 1s ease"}}>A platform that hosts and organizes scientific figures generated as part of a research project at Memorial Sloan-Kettering Cancer Center. Collates over 20,000 plots for ease of browsing by the scientific community, to make our results available for future research. <br/> <br/> <em>The main browser can be found <a href="https://cilantromalik.github.io/pchic-dataviewer">here</a>, with satellite browsers housing thousands more plots <a href="https://cilantromalik.github.io/pchic-contactplotviewer">here</a> and more visualizations <a href="https://cilantromalik.github.io/pchic-pca-viewer">here</a>.</em></p>
+                }
+            </div>
+            <br/>
+            <div style={{backgroundColor: "#2b3d24", borderRadius: "1rem", height: proj === "wyc" ? "30vh" : "10vh", width: "70%", fontSize: "1rem", padding: "0 2vh", transition: "height 0.5s ease-in-out"}}
+                 onMouseEnter={() => {setProj("wyc"); setTimeout(() => setProj2("wyc"), 500)}} onMouseLeave={() => {setProj(""); setTimeout(() => setProj2(""), 500)}}>
                 <h4 style={{fontSize: "1.3rem", textAlign: "center"}}>WatchYourCalendar</h4>
                 {proj === "wyc" &&
-                <p style={{opacity: proj2 === "wyc" ? 1 : 0, transition: "opacity 1s ease"}}>A multi-use iPhone and Apple Watch scheduling app that tries to be as convenient as possible while also being as specific and information-rich as possible. Designed for high school environments, it allows mindful management of classes, meetings, and other co-curricular activities while maintaining a minimalist UI and lightweight footprint — both in your pocket and at a glance on your wrist.<br/>Currently in use at Rye Country Day School, but can be adapted for nearly any schedule.</p>
+                <p style={{opacity: proj2 === "wyc" ? 1 : 0, transition: "opacity 1s ease"}}>A multi-use iPhone and Apple Watch scheduling app that tries to be as convenient as possible while also being as specific and information-rich as possible. Designed for high school environments, it allows mindful management of classes, meetings, and other co-curricular activities while maintaining a minimalist UI and lightweight footprint — both in your pocket and at a glance on your wrist.<br/>Currently developed for Rye Country Day School, but can be adapted for nearly any schedule.</p>
                 }
             </div>
             <br/>
