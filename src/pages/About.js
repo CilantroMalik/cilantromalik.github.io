@@ -43,12 +43,12 @@ export const About = () => {
                     <h3 style={{fontSize: "4vmin"}}>nouns</h3>
                     <ul style={{fontSize: "2vmin", fontWeight: "500"}}>
                         <li>nonbinary indian-american</li>
-                        <li>scarf enthusiast</li>
+                        <li>scarf lover</li>
                         <li>amateur pianist</li>
-                        <li>math & CS nerd</li>
-                        <li>urbanism nerd</li>
-                        <li>linguistics nerd</li>
-                        <li>game design nerd</li>
+                        <li>math & CS enthusiast</li>
+                        <li>urbanism enthusiast</li>
+                        <li>linguistics enthusiast</li>
+                        <li>game design enthusiast</li>
                         <li>devourer of books of all sorts</li>
                     </ul>
                 </div>

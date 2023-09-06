@@ -104,7 +104,7 @@ export const Home = () => {
             return
         }
         if (link === "/linkedin") { 
-            window.open("https://www.linkedin.com/in/rohan-malik-6a8983202/", "_blank")
+            window.open("https://www.linkedin.com/in/ro-malik-6a8983202/", "_blank")
             return
         }
         window.scrollTo({top: 1300, behavior: "auto"})
