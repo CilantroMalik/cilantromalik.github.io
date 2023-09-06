@@ -38,19 +38,19 @@ export const Projects = () => {
                 }
             </div>
             <br/>
-            <div style={{backgroundColor: "#2b3d24", borderRadius: "1rem", height: proj === "wyc" ? "30vh" : "10vh", width: "70%", fontSize: "1rem", padding: "0 2vh", transition: "height 0.5s ease-in-out"}}
-                 onMouseEnter={() => {setProj("wyc"); setTimeout(() => setProj2("wyc"), 500)}} onMouseLeave={() => {setProj(""); setTimeout(() => setProj2(""), 500)}}>
+            <div style={{backgroundColor: "#2b3d24", borderRadius: "1rem", height: proj === "strbk" ? "30vh" : "10vh", width: "70%", fontSize: "1rem", padding: "0 2vh", transition: "height 0.5s ease-in-out"}}
+                 onMouseEnter={() => {setProj("strbk"); setTimeout(() => setProj2("strbk"), 500)}} onMouseLeave={() => {setProj(""); setTimeout(() => setProj2(""), 500)}}>
                 <h4 style={{fontSize: "1.3rem", textAlign: "center"}}>Storybook</h4>
-                {proj === "wyc" &&
-                <p style={{opacity: proj2 === "wyc" ? 1 : 0, transition: "opacity 1s ease"}}>A web app for creating, hosting, and interacting with collaborative "story spaces," micro-communities where people can write short stories together one sentence at a time. Created as an experiment and an attempt to combat the increasing centralization and correspondingly decreasing intimacy of online human interaction, in some small and possibly but hopefully not insignificant way. <br/><br/> <em>Storybook can be accessed <a href="https://cilantromalik.github.io/storybook">here</a>.</em></p>
+                {proj === "strbk" &&
+                <p style={{opacity: proj2 === "strbk" ? 1 : 0, transition: "opacity 1s ease"}}>A web app for creating, hosting, and interacting with collaborative "story spaces," micro-communities where people can write short stories together one sentence at a time. Created as an experiment and an attempt to combat the increasing centralization and correspondingly decreasing intimacy of online human interaction, in some small and possibly but hopefully not insignificant way. <br/><br/> <em>Storybook can be accessed <a href="https://cilantromalik.github.io/storybook">here</a>.</em></p>
                 }
             </div>
             <br/>
-            <div style={{backgroundColor: "#2b3d24", borderRadius: "1rem", height: proj === "wyc" ? "30vh" : "10vh", width: "70%", fontSize: "1rem", padding: "0 2vh", transition: "height 0.5s ease-in-out"}}
-                 onMouseEnter={() => {setProj("wyc"); setTimeout(() => setProj2("wyc"), 500)}} onMouseLeave={() => {setProj(""); setTimeout(() => setProj2(""), 500)}}>
+            <div style={{backgroundColor: "#2b3d24", borderRadius: "1rem", height: proj === "pchic" ? "30vh" : "10vh", width: "70%", fontSize: "1rem", padding: "0 2vh", transition: "height 0.5s ease-in-out"}}
+                 onMouseEnter={() => {setProj("pchic"); setTimeout(() => setProj2("pchic"), 500)}} onMouseLeave={() => {setProj(""); setTimeout(() => setProj2(""), 500)}}>
                 <h4 style={{fontSize: "1.3rem", textAlign: "center"}}>PCHiC Data Viewer</h4>
-                {proj === "wyc" &&
-                <p style={{opacity: proj2 === "wyc" ? 1 : 0, transition: "opacity 1s ease"}}>A platform that hosts and organizes scientific figures generated as part of a research project at Memorial Sloan-Kettering Cancer Center. Collates over 20,000 plots for ease of browsing by the scientific community, to make our results available for future research. <br/> <br/> <em>The main browser can be found <a href="https://cilantromalik.github.io/pchic-dataviewer">here</a>, with satellite browsers housing thousands more plots <a href="https://cilantromalik.github.io/pchic-contactplotviewer">here</a> and more visualizations <a href="https://cilantromalik.github.io/pchic-pca-viewer">here</a>.</em></p>
+                {proj === "pchic" &&
+                <p style={{opacity: proj2 === "pchic" ? 1 : 0, transition: "opacity 1s ease"}}>A platform that hosts and organizes scientific figures generated as part of a research project at Memorial Sloan-Kettering Cancer Center. Collates over 20,000 plots for ease of browsing by the scientific community, to make our results available for future research. <br/> <br/> <em>The main browser can be found <a href="https://cilantromalik.github.io/pchic-dataviewer">here</a>, with satellite browsers housing thousands more plots <a href="https://cilantromalik.github.io/pchic-contactplotviewer">here</a> and more visualizations <a href="https://cilantromalik.github.io/pchic-pca-viewer">here</a>.</em></p>
                 }
             </div>
             <br/>
