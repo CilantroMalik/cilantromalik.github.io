@@ -26,7 +26,7 @@ export const Projects = () => {
                  onMouseEnter={() => {setProj("qm"); setTimeout(() => setProj2("qm"), 500)}} onMouseLeave={() => {setProj(""); setTimeout(() => setProj2(""), 500)}}>
                 <h4 style={{fontSize: "1.3rem", textAlign: "center"}}>QuantumMessenger</h4>
                 {proj === "qm" &&
-                <p style={{opacity: proj2 === "qm" ? 1 : 0, transition: "opacity 1s ease"}}>A quantum-powered proof of concept messaging client that uses the BB84 protocol for quantum key distribution to ensure end-to-end encryption for messages. Built under the mentorship of Dr. Francisco Martín at IBM Quantum Research, and powered by <a href="https://qiskit.org/">Qiskit</a>. <br/> <br/> <em>QuantumMessenger can be found <a href="https://qm.twdl.us">here</a>.</em></p>
+                <p style={{opacity: proj2 === "qm" ? 1 : 0, transition: "opacity 1s ease"}}>A quantum-powered proof of concept messaging client that uses the BB84 protocol for quantum key distribution to ensure end-to-end encryption for messages. Built under the mentorship of Dr. Francisco Martín at IBM Quantum Research, and powered by <a href="https://qiskit.org/" target="_blank">Qiskit</a>. <br/> <br/> <em>QuantumMessenger can be found <a href="https://qm.twdl.us" target="_blank">here</a>.</em></p>
                 }
             </div>
             <br/>
@@ -34,7 +34,7 @@ export const Projects = () => {
                  onMouseEnter={() => {setProj("isfl"); setTimeout(() => setProj2("isfl"), 500)}} onMouseLeave={() => {setProj(""); setTimeout(() => setProj2(""), 500)}}>
                 <h4 style={{fontSize: "1.3rem", textAlign: "center"}}>ISFL Fencing</h4>
                 {proj === "isfl" &&
-                <p style={{opacity: proj2 === "isfl" ? 1 : 0, transition: "opacity 1s ease"}}>A platform for viewing, reporting, and managing fencing league results and standings. With a minimalist interface that shows stats for teams, meets, and fencers, as well as enabling coaches to keep a record of completed meets, it provides a lightweight platform for fencers to scout opponents, see their hard-earned place in the rankings, and look back on the season once it's over. <br/><br/> <em>The platform can be viewed <a href="https://isflfencing.com">here</a>.</em></p>
+                <p style={{opacity: proj2 === "isfl" ? 1 : 0, transition: "opacity 1s ease"}}>A platform for viewing, reporting, and managing fencing league results and standings. With a minimalist interface that shows stats for teams, meets, and fencers, as well as enabling coaches to keep a record of completed meets, it provides a lightweight platform for fencers to scout opponents, see their hard-earned place in the rankings, and look back on the season once it's over. <br/><br/> <em>The platform can be viewed <a href="https://isflfencing.com" target="_blank">here</a>.</em></p>
                 }
             </div>
             <br/>
@@ -42,7 +42,7 @@ export const Projects = () => {
                  onMouseEnter={() => {setProj("strbk"); setTimeout(() => setProj2("strbk"), 500)}} onMouseLeave={() => {setProj(""); setTimeout(() => setProj2(""), 500)}}>
                 <h4 style={{fontSize: "1.3rem", textAlign: "center"}}>Storybook</h4>
                 {proj === "strbk" &&
-                <p style={{opacity: proj2 === "strbk" ? 1 : 0, transition: "opacity 1s ease"}}>A web app for creating, hosting, and interacting with collaborative "story spaces," micro-communities where people can write short stories together one sentence at a time. Created as an experiment and an attempt to combat the increasing centralization and correspondingly decreasing intimacy of online human interaction, in some small and possibly but hopefully not insignificant way. <br/><br/> <em>Storybook can be accessed <a href="https://cilantromalik.github.io/storybook">here</a>.</em></p>
+                <p style={{opacity: proj2 === "strbk" ? 1 : 0, transition: "opacity 1s ease"}}>A web app for creating, hosting, and interacting with collaborative "story spaces," micro-communities where people can write short stories together one sentence at a time. Created as an experiment and an attempt to combat the increasing centralization and correspondingly decreasing intimacy of online human interaction, in some small and possibly but hopefully not insignificant way. <br/><br/> <em>Storybook can be accessed <a href="https://cilantromalik.github.io/storybook" target="_blank">here</a>.</em></p>
                 }
             </div>
             <br/>
@@ -50,7 +50,7 @@ export const Projects = () => {
                  onMouseEnter={() => {setProj("pchic"); setTimeout(() => setProj2("pchic"), 500)}} onMouseLeave={() => {setProj(""); setTimeout(() => setProj2(""), 500)}}>
                 <h4 style={{fontSize: "1.3rem", textAlign: "center"}}>PCHiC Data Viewer</h4>
                 {proj === "pchic" &&
-                <p style={{opacity: proj2 === "pchic" ? 1 : 0, transition: "opacity 1s ease"}}>A platform that hosts and organizes scientific figures generated as part of a research project at Memorial Sloan-Kettering Cancer Center. Collates over 20,000 plots for ease of browsing by the scientific community, to make our results available for future research. <br/> <br/> <em>The main browser can be found <a href="https://cilantromalik.github.io/pchic-dataviewer">here</a>, with satellite browsers housing thousands more plots <a href="https://cilantromalik.github.io/pchic-contactplotviewer">here</a> and more visualizations <a href="https://cilantromalik.github.io/pchic-pca-viewer">here</a>.</em></p>
+                <p style={{opacity: proj2 === "pchic" ? 1 : 0, transition: "opacity 1s ease"}}>A platform that hosts and organizes scientific figures generated as part of a research project at Memorial Sloan-Kettering Cancer Center. Collates over 20,000 plots for ease of browsing by the scientific community, to make our results available for future research. <br/> <br/> <em>The main browser can be found <a href="https://cilantromalik.github.io/pchic-dataviewer" target="_blank">here</a>, with satellite browsers housing thousands more plots <a href="https://cilantromalik.github.io/pchic-contactplotviewer" target="_blank">here</a> and more visualizations <a href="https://cilantromalik.github.io/pchic-pca-viewer" target="_blank">here</a>.</em></p>
                 }
             </div>
             <br/>
