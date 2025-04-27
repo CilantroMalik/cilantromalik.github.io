@@ -178,7 +178,7 @@
     var test = {
         type: jsPsychImageKeyboardResponse,
         stimulus: jsPsych.timelineVariable('stimulus'),
-        stimulus_width: 700,
+        stimulus_width: 550,
         prompt: function() {
             const html = `<h2>${jsPsych.evaluateTimelineVariable('det').includes('every') ? "Every" : "Some"} ${jsPsych.evaluateTimelineVariable('shape')} is ${jsPsych.evaluateTimelineVariable('color')}.</h2>`;
             return html;
@@ -264,7 +264,7 @@
     var test2 = {
         type: jsPsychImageKeyboardResponse,
         stimulus: jsPsych.timelineVariable('stimulus'),
-        stimulus_width: 600,
+        stimulus_width: 430,
         prompt: function() {
             const html = `<h2>${jsPsych.evaluateTimelineVariable('det').includes('every') ? "Every" : "Some"} ${jsPsych.evaluateTimelineVariable('color')} book is ${jsPsych.evaluateTimelineVariable('height')}.</h2>`;
             return html;
