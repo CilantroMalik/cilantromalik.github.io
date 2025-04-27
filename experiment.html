@@ -36,8 +36,8 @@
     });
 
     // ---- constants ----
-    const TRIALS_PER_ROUND = 3
-    const N_ROUNDS = 2
+    const TRIALS_PER_ROUND = 8
+    const N_ROUNDS = 5
     // ---- end constants ----
 
     var img_list = [];
@@ -60,6 +60,23 @@
         });
     });
 
+    var random_stimuli = jsPsych.randomization.sampleWithoutReplacement(img_list, TRIALS_PER_ROUND*N_ROUNDS);
+
+    var test_stimuli = [];
+
+    random_stimuli.forEach(stim => {
+        const image_name = stim.split("/")[2]
+        const components = image_name.split("-")
+        test_stimuli.push({
+            stimulus: stim,
+            correct: components[3] === "true" ? "y" : "n",
+            det: components[0],
+            shape: components[1],
+            color: components[2]
+        })
+    });
+
+
     var books_list = [];
     var books_dict = {};
     ['every', 'some'].forEach(det => {
@@ -80,11 +97,27 @@
         });
     });
 
+    var random_books = jsPsych.randomization.sampleWithoutReplacement(books_list, TRIALS_PER_ROUND*N_ROUNDS);
+
+    var test_books = [];
+
+    random_books.forEach(stim => {
+        const image_name = stim.split("/")[2]
+        const components = image_name.split("-")
+        test_books.push({
+            stimulus: stim,
+            correct: components[3] === "true" ? "y" : "n",
+            det: components[0],
+            height: components[1],
+            color: components[2]
+        })
+    });
+
     var timeline = [];
 
     var preload = {
         type: jsPsychPreload,
-        images: img_list.concat(books_list)
+        images: random_stimuli.concat(random_books)
     };
     timeline.push(preload);
 
@@ -141,22 +174,6 @@
         },
         record_data: false
     };
-
-    var random_stimuli = jsPsych.randomization.sampleWithoutReplacement(img_list, TRIALS_PER_ROUND*N_ROUNDS);
-
-    var test_stimuli = [];
-
-    random_stimuli.forEach(stim => {
-        const image_name = stim.split("/")[2]
-        const components = image_name.split("-")
-        test_stimuli.push({
-            stimulus: stim,
-            correct: components[3] === "true" ? "y" : "n",
-            det: components[0],
-            shape: components[1],
-            color: components[2]
-        })
-    });
 
     var test = {
         type: jsPsychImageKeyboardResponse,
@@ -244,22 +261,6 @@
     }
     timeline.push(interlude);
 
-    var random_books = jsPsych.randomization.sampleWithoutReplacement(books_list, TRIALS_PER_ROUND*N_ROUNDS);
-
-    var test_books = [];
-
-    random_books.forEach(stim => {
-        const image_name = stim.split("/")[2]
-        const components = image_name.split("-")
-        test_books.push({
-            stimulus: stim,
-            correct: components[3] === "true" ? "y" : "n",
-            det: components[0],
-            height: components[1],
-            color: components[2]
-        })
-    });
-
     var test2 = {
         type: jsPsychImageKeyboardResponse,
         stimulus: jsPsych.timelineVariable('stimulus'),
@@ -325,21 +326,21 @@
             for (const tr of jsPsych.data.get().filter({task: 'response'}).trials.concat(jsPsych.data.get().filter({task: 'response2'}).trials)) {
                 trials.push([tr.det, tr.condition, tr.correct == "y", tr.answer ? "√" : "x", tr.rt]);
             }
-            console.log(trials);
+            // console.log(trials);
             const resp_obj = {
                 survey_answers: survey_answers,
                 trial_data: trials
             }
 
             const now = new Date();
-            // emailjs.send("service_vhs3iqn", "template_xynan5a", {name: survey_answers.name, time: now.toISOString(), message: JSON.stringify(resp_obj), title: survey_answers.name}).then(
-            //     (response) => {
-            //         console.log('success!', response.status, response.text);
-            //     },
-            //     (error) => {
-            //         console.log('failure...', error);
-            //     },
-            // );
+            emailjs.send("service_vhs3iqn", "template_xynan5a", {name: survey_answers.name, time: now.toISOString(), message: JSON.stringify(resp_obj), title: survey_answers.name}).then(
+                (response) => {
+                    console.log('success!', response.status, response.text);
+                },
+                (error) => {
+                    console.log('failure...', error);
+                },
+            );
         }
     }
     timeline.push(data_dump)
