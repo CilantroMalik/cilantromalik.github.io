@@ -36,8 +36,8 @@
     });
 
     // ---- constants ----
-    const TRIALS_PER_ROUND = 10
-    const N_ROUNDS = 6
+    const TRIALS_PER_ROUND = 12
+    const N_ROUNDS = 8
     // ---- end constants ----
 
     var img_list = [];
@@ -254,6 +254,7 @@
         type: jsPsychHtmlKeyboardResponse,
         stimulus: `
             <p>With that out of the way, we're ready to move on to the main experiment.</p>
+            <p>Press Y if the sentence is sensible and true, and press N if the sentence is false <em>or sounds like it doesn't make sense given the situation</em>.</p>
             <p><em>Press any key to continue.</em></p>
         `,
         data: {
@@ -442,7 +443,7 @@
             //     trials.push([tr.det, tr.condition, tr.correct == "y", tr.answer ? "√" : "x", tr.rt]);
             // }
             for (const tr of jsPsych.data.get().filter({task: 'response'}).trials) {
-                trials.push([tr.det, tr.condition, tr.correct == "y", tr.answer ? "√" : "x", tr.rt]);
+                trials.push([tr.det, tr.size, tr.condition, tr.correct == "y", tr.answer ? "√" : "x", tr.rt]);
             }
             console.log(trials);
             const resp_obj = {
