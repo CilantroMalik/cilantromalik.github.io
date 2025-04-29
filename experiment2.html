@@ -172,7 +172,7 @@
         type: jsPsychHtmlKeyboardResponse,
         stimulus: `
             <p>Some of the sentences here are a bit weird, so we're going to get you warmed up with some examples.</p>
-            <p>These aren't timed, so you can think about them for a bit longer and get a sense for what's going on.</p>
+            <p>These aren't timed, so you can think about them for a bit longer and get a sense of what's going on.</p>
             <p><em>Press any key to continue.</em></p>
         `,
         data: {
@@ -308,7 +308,8 @@
             condition: function() {
                 const html = `${jsPsych.evaluateTimelineVariable('shape')}-${jsPsych.evaluateTimelineVariable('color')}`;
                 return html;
-            }
+            },
+            size: jsPsych.timelineVariable('size')
         },
         on_finish: function(data) {
             data.answer = jsPsych.pluginAPI.compareKeys(data.response, data.correct);
